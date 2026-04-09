@@ -11,11 +11,11 @@
       --headline: #cf2b97;
       --body: #2d6f95;
       --body-strong: #2f7094;
-      --brand-max: 430px;
-      --page-max: 1600px;
+      --brand-max: 360px;
+      --page-max: 1460px;
       --pad-x: clamp(20px, 4vw, 64px);
       --pad-y: clamp(22px, 3.6vw, 42px);
-      --content-max: 760px;
+      --content-max: 620px;
     }
 
     * {
@@ -67,14 +67,14 @@
       width: min(100%, var(--content-max));
       display: flex;
       flex-direction: column;
-      gap: clamp(28px, 3vw, 52px);
+      gap: clamp(22px, 2.4vw, 38px);
       padding-bottom: clamp(28px, 5vw, 64px);
     }
 
     h1 {
       margin: 0;
       color: var(--headline);
-      font-size: clamp(2.2rem, 4.2vw, 4.35rem);
+      font-size: clamp(1.85rem, 3.3vw, 3.35rem);
       line-height: 0.98;
       letter-spacing: -0.045em;
       font-weight: 700;
@@ -84,8 +84,8 @@
 
     .facts {
       display: grid;
-      gap: clamp(12px, 1.5vw, 22px);
-      font-size: clamp(1.22rem, 2.05vw, 2.15rem);
+      gap: clamp(10px, 1.1vw, 16px);
+      font-size: clamp(1.05rem, 1.6vw, 1.6rem);
       line-height: 1.22;
       letter-spacing: -0.02em;
       max-width: 19ch;
@@ -97,14 +97,14 @@
       align-items: start;
       gap: clamp(12px, 1.2vw, 18px);
       max-width: 21ch;
-      font-size: clamp(1.18rem, 1.95vw, 1.9rem);
+      font-size: clamp(1rem, 1.45vw, 1.45rem);
       line-height: 1.13;
       letter-spacing: -0.02em;
       color: var(--body-strong);
     }
 
     .problem-dot {
-      width: clamp(18px, 1.8vw, 28px);
+      width: clamp(14px, 1.3vw, 20px);
       aspect-ratio: 1;
       border-radius: 50%;
       background: var(--headline);
@@ -118,13 +118,13 @@
 
     .brand-lockup {
       display: grid;
-      gap: clamp(16px, 1.8vw, 24px);
+      gap: clamp(12px, 1.2vw, 18px);
       max-width: 22ch;
       margin-top: clamp(2px, 0.5vw, 8px);
     }
 
     .logo-wrap {
-      width: clamp(230px, 30vw, var(--brand-max));
+      width: clamp(180px, 22vw, var(--brand-max));
     }
 
     .logo {
@@ -135,7 +135,7 @@
 
     .tagline {
       margin: 0;
-      font-size: clamp(1.55rem, 2.65vw, 2.8rem);
+      font-size: clamp(1.18rem, 2vw, 2rem);
       line-height: 1.06;
       letter-spacing: -0.03em;
       max-width: 12ch;
@@ -153,7 +153,7 @@
       right: 0;
       bottom: 0;
       z-index: 1;
-      width: min(53vw, 820px);
+      width: min(46vw, 680px);
       pointer-events: none;
     }
 
@@ -166,7 +166,7 @@
 
     @media (max-width: 1180px) {
       .art {
-        width: min(48vw, 650px);
+        width: min(43vw, 560px);
         opacity: 0.9;
       }
     }
@@ -180,7 +180,7 @@
       .content {
         width: 100%;
         max-width: none;
-        gap: 24px;
+        gap: 20px;
       }
 
       h1,
@@ -193,7 +193,7 @@
 
       .art {
         position: relative;
-        width: min(100%, 540px);
+        width: min(100%, 460px);
         margin-left: auto;
         margin-top: 4px;
       }
@@ -205,30 +205,30 @@
       }
 
       h1 {
-        font-size: clamp(2rem, 10.3vw, 3rem);
+        font-size: clamp(1.8rem, 8.8vw, 2.6rem);
         max-width: 11.5ch;
       }
 
       .facts {
-        font-size: clamp(1.02rem, 5.7vw, 1.38rem);
+        font-size: clamp(0.98rem, 4.8vw, 1.18rem);
         line-height: 1.23;
       }
 
       .problem {
-        font-size: clamp(1rem, 5vw, 1.26rem);
+        font-size: clamp(0.96rem, 4.3vw, 1.1rem);
       }
 
       .logo-wrap {
-        width: min(300px, 88vw);
+        width: min(240px, 76vw);
       }
 
       .tagline {
-        font-size: clamp(1.22rem, 6vw, 1.7rem);
+        font-size: clamp(1.02rem, 5.2vw, 1.34rem);
         max-width: 13ch;
       }
 
       .art {
-        width: min(100%, 430px);
+        width: min(100%, 360px);
       }
     }
   </style>
