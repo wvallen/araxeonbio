@@ -15,9 +15,9 @@
       --page-max: 1460px;
       --pad-x: clamp(20px, 4vw, 64px);
       --pad-y: clamp(20px, 3.2vw, 36px);
-      --content-max: 560px;
-      --art-width: clamp(300px, 42vw, 720px);
-      --art-gap: clamp(24px, 4vw, 72px);
+      --content-max: 610px;
+      --art-width: clamp(340px, 44vw, 760px);
+      --art-gap: clamp(22px, 3.8vw, 64px);
     }
 
     * {
@@ -70,28 +70,28 @@
       max-width: var(--content-max);
       display: flex;
       flex-direction: column;
-      gap: clamp(16px, 2vw, 30px);
+      gap: clamp(17px, 2.1vw, 30px);
       padding-bottom: clamp(22px, 4.4vw, 54px);
     }
 
     h1 {
       margin: 0;
       color: var(--headline);
-      font-size: clamp(1.55rem, 2.65vw, 2.7rem);
+      font-size: clamp(1.66rem, 2.88vw, 2.95rem);
       line-height: 1.01;
       letter-spacing: -0.045em;
       font-weight: 650;
-      max-width: 12ch;
+      max-width: 12.6ch;
       text-wrap: balance;
     }
 
     .facts {
       display: grid;
       gap: clamp(8px, 0.9vw, 12px);
-      font-size: clamp(0.95rem, 1.22vw, 1.24rem);
-      line-height: 1.28;
+      font-size: clamp(1rem, 1.3vw, 1.34rem);
+      line-height: 1.29;
       letter-spacing: -0.02em;
-      max-width: 21ch;
+      max-width: 22ch;
     }
 
     .problem {
@@ -122,7 +122,7 @@
     .brand-lockup {
       display: grid;
       gap: clamp(10px, 1vw, 14px);
-      max-width: 24ch;
+      max-width: 25ch;
       margin-top: clamp(0px, 0.35vw, 5px);
     }
 
@@ -138,10 +138,10 @@
 
     .tagline {
       margin: 0;
-      font-size: clamp(1rem, 1.45vw, 1.45rem);
+      font-size: clamp(1.06rem, 1.6vw, 1.6rem);
       line-height: 1.16;
       letter-spacing: -0.03em;
-      max-width: 14ch;
+      max-width: 14.5ch;
       color: var(--body);
       text-wrap: balance;
     }
@@ -183,14 +183,16 @@
         position: absolute;
         top: 0;
         right: min(0px, calc((var(--page-max) - 100vw) / 2));
-        width: min(45vw, 700px);
+        bottom: 0;
+        width: var(--art-width);
+        overflow: hidden;
         margin: 0;
       }
 
       .art img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
         object-position: right center;
       }
     }
