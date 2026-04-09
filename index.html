@@ -1,49 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Araxeon</title>
-  <meta name="description" content="Araxeon is building the immune data layer for women's health." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Araxeon Biosciences</title>
+  <meta name="description" content="Araxeon Biosciences is building the first blood-based longitudinal immune atlas for women’s health." />
   <style>
+    :root {
+      --bg: #f4f4f4;
+      --headline: #cf2b97;
+      --body: #2d6f95;
+      --body-strong: #2f7094;
+      --brand-max: 430px;
+      --page-max: 1600px;
+      --pad-x: clamp(20px, 4vw, 64px);
+      --pad-y: clamp(22px, 3.6vw, 42px);
+      --content-max: 760px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       min-height: 100%;
+      background: var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
+
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      overflow-x: hidden;
     }
-    .wrap {
-      max-width: 900px;
-      padding: 48px 24px;
-      text-align: center;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      user-select: none;
+      -webkit-user-drag: none;
     }
-    h1 {
-      margin: 0 0 18px;
-      font-size: clamp(42px, 8vw, 84px);
-      font-weight: 500;
-      letter-spacing: 0.04em;
+
+    .site {
+      min-height: 100svh;
+      background: var(--bg);
     }
-    p {
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      max-width: var(--page-max);
       margin: 0 auto;
-      max-width: 700px;
-      font-size: clamp(18px, 2.2vw, 26px);
-      line-height: 1.4;
-      color: rgba(245,245,245,0.72);
+      padding: var(--pad-y) var(--pad-x) 0;
+      overflow: clip;
+      isolation: isolate;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      width: min(100%, var(--content-max));
+      display: flex;
+      flex-direction: column;
+      gap: clamp(28px, 3vw, 52px);
+      padding-bottom: clamp(28px, 5vw, 64px);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--headline);
+      font-size: clamp(2.2rem, 4.2vw, 4.35rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 700;
+      max-width: 13ch;
+      text-wrap: balance;
+    }
+
+    .facts {
+      display: grid;
+      gap: clamp(12px, 1.5vw, 22px);
+      font-size: clamp(1.22rem, 2.05vw, 2.15rem);
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      max-width: 19ch;
+    }
+
+    .problem {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: clamp(12px, 1.2vw, 18px);
+      max-width: 21ch;
+      font-size: clamp(1.18rem, 1.95vw, 1.9rem);
+      line-height: 1.13;
+      letter-spacing: -0.02em;
+      color: var(--body-strong);
+    }
+
+    .problem-dot {
+      width: clamp(18px, 1.8vw, 28px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--headline);
+      margin-top: 0.18em;
+      flex: none;
+    }
+
+    .problem strong {
+      font-weight: 800;
+    }
+
+    .brand-lockup {
+      display: grid;
+      gap: clamp(16px, 1.8vw, 24px);
+      max-width: 22ch;
+      margin-top: clamp(2px, 0.5vw, 8px);
+    }
+
+    .logo-wrap {
+      width: clamp(230px, 30vw, var(--brand-max));
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .tagline {
+      margin: 0;
+      font-size: clamp(1.55rem, 2.65vw, 2.8rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      max-width: 12ch;
+      color: var(--body);
+      text-wrap: balance;
+    }
+
+    .tagline .accent {
+      color: var(--headline);
+      font-weight: 700;
+    }
+
+    .art {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      width: min(53vw, 820px);
+      pointer-events: none;
+    }
+
+    .art img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: right bottom;
+    }
+
+    @media (max-width: 1180px) {
+      .art {
+        width: min(48vw, 650px);
+        opacity: 0.9;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height: auto;
+        padding-bottom: 0;
+      }
+
+      .content {
+        width: 100%;
+        max-width: none;
+        gap: 24px;
+      }
+
+      h1,
+      .facts,
+      .problem,
+      .brand-lockup,
+      .tagline {
+        max-width: none;
+      }
+
+      .art {
+        position: relative;
+        width: min(100%, 540px);
+        margin-left: auto;
+        margin-top: 4px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 18px 18px 0;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 10.3vw, 3rem);
+        max-width: 11.5ch;
+      }
+
+      .facts {
+        font-size: clamp(1.02rem, 5.7vw, 1.38rem);
+        line-height: 1.23;
+      }
+
+      .problem {
+        font-size: clamp(1rem, 5vw, 1.26rem);
+      }
+
+      .logo-wrap {
+        width: min(300px, 88vw);
+      }
+
+      .tagline {
+        font-size: clamp(1.22rem, 6vw, 1.7rem);
+        max-width: 13ch;
+      }
+
+      .art {
+        width: min(100%, 430px);
+      }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>ARAXEON</h1>
-    <p>building the immune data layer for women’s health</p>
+  <main class="site">
+    <section class="hero" aria-label="Araxeon Biosciences introduction">
+      <div class="content">
+        <h1>Half The Population, A Fraction Of The Data</h1>
+
+        <div class="facts" aria-label="Key facts about the data gap in women’s health">
+          <div>Women excluded from clinical trials until 1993</div>
+          <div>Even today data is rarely analyzed by sex</div>
+          <div>Women-focused longitudinal data is missing</div>
+        </div>
+
+        <div class="problem">
+          <div class="problem-dot" aria-hidden="true"></div>
+          <div><strong>THE PROBLEM:</strong> The lack of women-specific data is a huge gap in medicine</div>
+        </div>
+
+        <div class="brand-lockup">
+          <div class="logo-wrap">
+            <img class="logo" src="./stock/Araxeon_Logo.png" alt="Araxeon Biosciences" loading="eager" decoding="async" />
+          </div>
+
+          <p class="tagline">
+            Building the <span class="accent">first blood-based longitudinal immune atlas for women’s health</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="art" aria-hidden="true">
+        <img src="./stock/women.png" alt="" loading="eager" decoding="async" />
+      </div>
+    </section>
   </main>
 </body>
 </html>
